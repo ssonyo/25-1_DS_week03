@@ -4,3 +4,4 @@ wandb/
 cache/
 *.pyc
 __pycache__/
+checkpoint/

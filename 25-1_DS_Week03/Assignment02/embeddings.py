@@ -9,7 +9,7 @@ class TokenEmbedding(nn.Module):
         self.embedding = nn.Embedding(vocab_size, d_model)
     
     def forward(self, x: Tensor) -> Tensor:
-        return self.embedding(x)
+        #TODO
 
 class PositionEmbedding(nn.Module):
     def __init__(self, d_model: int, max_len: int = 5000) -> None:
