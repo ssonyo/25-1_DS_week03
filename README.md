@@ -1,15 +1,19 @@
 
 
 # Week 03 과제
+Due 3/31 23:59 p.m.
 
+25.03.26 01:33) 데이터셋 변경
 
 ## Assignment1. Sentence Embedding ; SimCSE implementation
 
-1. `train.py`의 TODO를 채워 SimCSE를 구현하고,
+1. `train.py`의 TODO를 채워 Unsupervised SimCSE를 구현하고,
 2. embedding 을 faiss 에 저장해 유사 문장 검색을 해봅시다.
-   (faiss는 gpu version이므로 vessl을 쓰거나 colab을 쓰세용.)
+   (faiss는 gpu 버전이므로 vessl을 쓰거나 colab을 쓰세용.)
 4. query와 가장 유사한 문장 5개를 뽑아보고 캡처해서 제출합시다.
 ❗daily dialog data 로 학습했으므로 일상적인 query를 날리면 됩니다.
+![image](https://github.com/user-attachments/assets/f3eca10a-d0ac-4371-a815-6b0b1e855c2c)
+
 
 
 ## Assignment2. End-to-end Token embedding
