@@ -2,7 +2,7 @@
 
 # Week 03 과제
 
-0. gen_data.py 를 실행해 data/simple_corpus.txt 를 얻읍시다. 두 task에서 같은 데이터셋을 쓸 예정입니다.
+0. gen_data.py 를 실행해 data/simple_corpus.txt 를 얻읍시다.
 
 ## Assignment1. Sentence Embedding ; SimCSE implementation
 
@@ -16,5 +16,3 @@
 안 하신 분들은 구현해보시고, 하신분들은 복붙하셔도 됩니다.
 2. 이 코드는 decoder 대신 classifier을 사용해 다음 단어를 맞추는 방식 (sequence-to-one)으로 embedding과 model parameter을 end-to-end로 함께 학습합니다.
 3. nn.Embedding 과 Contextual embedding 이 어떻게 변화하는지 관찰해봅시다!
-
-   ![image](https://github.com/user-attachments/assets/3671bcb2-73c1-48f2-b9fa-b6c23f117325)
