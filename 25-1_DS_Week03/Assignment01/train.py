@@ -29,20 +29,7 @@ for epoch in range(EPOCHS):
     model.train()
     total_loss = 0
 
-    for batch in dataloader:
-        input_ids, attention_mask = batch
-        input_ids = input_ids.cuda()
-        attention_mask = attention_mask.cuda()
-
-        optimizer.zero_grad()
-        embeddings = model(input_ids, attention_mask=attention_mask)
-
-        # Contrastive loss: maximize similarity for the same sentence
-        loss = criterion(embeddings, embeddings)  # This is a placeholder
-        loss.backward()
-        optimizer.step()
-
-        total_loss += loss.item()
+    # TODO
 
     avg_loss = total_loss / len(dataloader)
     print(f"Epoch {epoch + 1}/{EPOCHS}, Loss: {avg_loss:.4f}")
