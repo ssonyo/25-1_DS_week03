@@ -1,0 +1,6 @@
+data/
+venv/
+wandb/
+cache/
+*.pyc
+__pycache__/
