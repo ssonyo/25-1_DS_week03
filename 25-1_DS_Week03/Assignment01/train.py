@@ -44,33 +44,7 @@ for epoch in range(EPOCHS):
     total_loss = 0
     epoch_start = time.time()
 
-    for step, batch in enumerate(dataloader):
-        input_ids, attention_mask = batch
-        input_ids = input_ids.to(device)
-        attention_mask = attention_mask.to(device)
-
-        optimizer.zero_grad()
-
-        emb1 = model.forward(input_ids, attention_mask)
-        emb2 = model.forward(input_ids, attention_mask)
-
-        similarity_matrix = F.cosine_similarity(emb1.unsqueeze(1), emb2.unsqueeze(0), dim=-1)
-        similarity_matrix = similarity_matrix / TEMPERATURE
-
-        labels = torch.arange(BATCH_SIZE).long().to(device)
-        loss = F.cross_entropy(similarity_matrix, labels)
-
-        optimizer.zero_grad()
-        loss.backward()
-
-        optimizer.step()
-
-        total_loss += loss.item()
-
-        if (step + 1) % 10 == 0 or (step + 1) == len(dataloader):
-            percent = 100. * (step + 1) / len(dataloader)
-            print(f"Epoch [{epoch+1}/{EPOCHS}] Step [{step+1}/{len(dataloader)}] "
-                  f"Loss: {loss.item():.4f} ({percent:.1f}%)")
+    #TODO 
 
     avg_loss = total_loss / len(dataloader)
     epoch_time = time.time() - epoch_start
