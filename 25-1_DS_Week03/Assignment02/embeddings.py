@@ -18,4 +18,5 @@ class PositionEmbedding(nn.Module):
         #TODO
     
     def forward(self, x: Tensor) -> Tensor:
+        pass
         #TODO one line!
