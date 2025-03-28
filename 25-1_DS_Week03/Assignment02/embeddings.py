@@ -9,19 +9,13 @@ class TokenEmbedding(nn.Module):
         self.embedding = nn.Embedding(vocab_size, d_model)
     
     def forward(self, x: Tensor) -> Tensor:
-        return self.embedding(x)
+        pass
+        #TODO
 
 class PositionEmbedding(nn.Module):
     def __init__(self, d_model: int, max_len: int = 5000) -> None:
         super(PositionEmbedding, self).__init__()
         #TODO
-        position = torch.arange(max_len, dtype=torch.float).unsqueeze(1) # (max_len, 1)
-        _2i = torch.arange(0, d_model, 2, dtype=torch.float)
-        div_term = 10000 ** (_2i / d_model)
-        self.encoding = torch.zeros(max_len, d_model)
-        self.encoding[:, 0::2] = torch.sin(position / div_term)
-        self.encoding[:, 1::2] = torch.cos(position / div_term)
-        self.encoding = self.encoding.unsqueeze(0)
     
     def forward(self, x: Tensor) -> Tensor:
         #TODO one line!
