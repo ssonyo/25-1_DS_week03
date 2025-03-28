@@ -19,5 +19,3 @@ class PositionEmbedding(nn.Module):
     
     def forward(self, x: Tensor) -> Tensor:
         #TODO one line!
-        batch_size, seq_len = x.size()
-        return self.encoding[:, :seq_len].to(x.device)
