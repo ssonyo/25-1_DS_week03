@@ -10,7 +10,7 @@
 1. `train.py`의 TODO를 채워 Unsupervised SimCSE를 구현하고,
 2. embedding 을 faiss 에 저장해 유사 문장 검색을 해봅시다.
    (faiss는 gpu 버전이므로 vessl을 쓰거나 colab을 쓰세용.)
-4. query와 가장 유사한 문장 5개를 뽑아보고 캡처해서 제출합시다.
+4. query와 가장 유사한 문장 5개를 뽑아보고 캡처해서 제출합시다. (`assignment1.png`)
    
 ❗daily dialogue data 로 학습했으므로 일상적인 query를 날리면 됩니다.
 
@@ -25,7 +25,7 @@
    안 하신 분들은 구현해보시고, 하신 분들은 복붙하셔도 됩니다.
 2. 이 코드는 decoder 대신 classifier을 사용해 다음 단어를 맞추는 방식 (sequence-to-one)으로 embedding layer와 model parameter을 end-to-end로 함께 학습합니다.
 3. nn.Embedding 과 Contextual embedding 이 어떻게 변화하는지 다양한 방법으로 관찰해봅시다
-4. `train.py`의 마지막 feature을 캡처해서 제출합시다!
+4. `train.py`의 마지막 figure을 캡처해서 제출합시다! (`assignment2.png`)
 
 ``` bash
 25-1_DS_Week03
