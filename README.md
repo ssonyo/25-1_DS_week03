@@ -9,7 +9,7 @@
 
 1. `train.py`의 TODO를 채워 Unsupervised SimCSE를 구현하고,
 2. embedding 을 faiss 에 저장해 유사 문장 검색을 해봅시다.
-   (faiss는 gpu 버전이므로 vessl을 쓰거나 colab을 쓰세용.)
+   (faiss는 gpu 버전이므로 vessl을 쓰거나 colab을 쓰세용. cpu로 설치하면 torch version과 충돌이 납니다)
 4. query와 가장 유사한 문장 5개를 뽑아보고 캡처해서 제출합시다. (`assignment1.png`)
    
 ❗daily dialogue data 로 학습했으므로 일상적인 query를 날리면 됩니다.
@@ -28,7 +28,8 @@
 4. `train.py`의 마지막 figure을 캡처해서 제출합시다! (`assignment2.png`)
 
 ``` bash
-25-1_DS_Week03
+
+Week03
 ├── Assignment01
 │   ├── dataset.py
 │   ├── eval.ipynb
